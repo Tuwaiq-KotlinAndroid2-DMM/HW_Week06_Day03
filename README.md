@@ -8,7 +8,7 @@ The Home Work has to be delievered before 9AM ⚠️
 # Your app should preform the following actions:
 - Get all posts
 - Add new posts
-- Updat posts
+- Update posts
 - Delete posts
 
 
