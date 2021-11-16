@@ -13,7 +13,6 @@ The Home Work has to be delievered before 9AM ⚠️
 
 
 # Bonus Challenge 🔥
-## Display all information about the movie:
 - Caching images
 
 
