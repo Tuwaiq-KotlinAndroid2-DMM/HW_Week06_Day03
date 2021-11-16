@@ -17,10 +17,8 @@ class PostViewModel: ViewModel() {
         val livedataPost = MutableLiveData<List<Post>>()
         PostsServices.create().getPosts().enqueue(object : Callback<List<Post>> {
             override fun onResponse(call: Call<List<Post>>?, response: Response<List<Post>>?){
-                Log.d(TAG,"Statues: ${response?.isSuccessful}")
                 if (response?.body() != null) {
                     val products = response?.body()
-                    Log.d(TAG,"Statues: ${products}")
                     livedataPost.postValue(products)
                 }
             }
@@ -31,10 +29,58 @@ class PostViewModel: ViewModel() {
         return livedataPost
     }
 
-    fun insertNewPost(post: Post){}
+    fun insertNewPost(post: Post): MutableLiveData<Post>{
+        val livedataPost = MutableLiveData<Post>()
 
-    fun updateThePost(post: Post){}
+        PostsServices.create().insertPosts(post).enqueue(object : Callback<Post>{
+            override fun onResponse(call: Call<Post>, response: Response<Post>) {
+                if (response.isSuccessful){
+                    livedataPost.postValue(response?.body())
+                }
+            }
 
-    fun deleteThePost(id: Int){}
+            override fun onFailure(call: Call<Post>, t: Throwable) {
+            }
+
+        })
+
+        return livedataPost
+    }
+
+    fun updateThePost(id: Int, post: Post): MutableLiveData<Post>{
+        val livedataPost = MutableLiveData<Post>()
+
+        PostsServices.create().updatePost(id, post).enqueue(object : Callback<Post>{
+            override fun onResponse(call: Call<Post>, response: Response<Post>) {
+                if (response.isSuccessful){
+                    livedataPost.postValue(response?.body())
+                }
+            }
+
+            override fun onFailure(call: Call<Post>, t: Throwable) {
+            }
+
+        })
+
+        return livedataPost
+    }
+
+    fun deleteThePost(id: Int): MutableLiveData<Post>{
+        val livedataPost = MutableLiveData<Post>()
+
+        PostsServices.create().deletePost(id).enqueue(object : Callback<Post>{
+            override fun onResponse(call: Call<Post>, response: Response<Post>) {
+                if (response.isSuccessful){
+                    livedataPost.postValue(response?.body())
+                }
+            }
+
+            override fun onFailure(call: Call<Post>, t: Throwable) {
+            }
+
+        })
+
+        return livedataPost
+    }
 
 }
