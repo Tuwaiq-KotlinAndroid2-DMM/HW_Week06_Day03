@@ -6,55 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/buttonDelete"
-        android:layout_width="150dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="24dp"
-        android:text="Delete posts "
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerViewPost"
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonUpdat" />
-
-    <Button
-        android:id="@+id/buttonUpdat"
-        android:layout_width="150dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="26dp"
-        android:text="Updat posts"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonAdd" />
-
-    <Button
-        android:id="@+id/buttonAdd"
-        android:layout_width="150dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="28dp"
-        android:text="Add post"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonAllpost" />
-
-    <TextView
-        android:id="@+id/textViwe"
-        android:layout_width="215dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="216dp"
-        android:text="........"
-        android:textSize="20sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/buttonAllpost"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="72dp"
-        android:text="Get all posts"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViwe" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
