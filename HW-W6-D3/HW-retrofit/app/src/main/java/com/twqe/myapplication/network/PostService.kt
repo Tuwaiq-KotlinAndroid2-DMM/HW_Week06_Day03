@@ -1,4 +1,4 @@
-package com.twqe.myapplication
+package com.twqe.myapplication.network
 
 import com.twqe.myapplication.modle.Post
 import retrofit2.Call

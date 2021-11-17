@@ -4,5 +4,4 @@
         android:state_checked="false"/>
     <item android:drawable="@mipmap/heart3"
         android:state_checked="true"/>
-    <item android:drawable="@mipmap/heart2"/>
 </selector>
