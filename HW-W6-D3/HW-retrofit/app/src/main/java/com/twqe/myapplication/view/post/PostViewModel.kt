@@ -13,4 +13,16 @@ class PostViewModel : ViewModel() {
     fun getPosts(): LiveData<List<Post>> {
         return postRepository.getAllPosts()
     }
+
+    fun EditPost(): LiveData<List<Post>> {
+        return postRepository.updatePost()
+    }
+
+    fun AddPost(): LiveData<List<Post>> {
+        return postRepository.addPost()
+    }
+
+    fun DeletePost(): LiveData<List<Post>> {
+        return postRepository.deletePost()
+    }
 }
