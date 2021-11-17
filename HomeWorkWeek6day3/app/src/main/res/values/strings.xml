@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HomeWorkWeek6day3</string>
+    <string name="name">name</string>
+    <string name="like">Like</string>
+    <string name="postbody">PostBody</string>
+    <string name="etimgurl">ETImgUrl</string>
+</resources>
