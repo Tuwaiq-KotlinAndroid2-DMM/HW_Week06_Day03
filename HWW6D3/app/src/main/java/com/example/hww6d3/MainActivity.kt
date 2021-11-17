@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         mRecyclerView = findViewById(R.id.mRecyclerView)
         mRecyclerView.layoutManager = LinearLayoutManager(this)
         var retrofit= Retrofit.Builder()
-            .baseUrl("https://61938d0dd3ae6d0017da866b.mockapi.io/")
+            .baseUrl("https://61938d0dd3ae6d0017da866b.mockapi.io/api/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
@@ -87,7 +87,6 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 override fun onFailure(call: Call<Post>, t: Throwable) {
-                    TODO("Not yet implemented")
                 }
 
             })

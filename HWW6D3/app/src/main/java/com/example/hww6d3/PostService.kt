@@ -4,16 +4,16 @@ import retrofit2.Call
 import retrofit2.http.*
 
 interface PostService {
-    @GET("Posts")
+    @GET("posts")
     fun getAllPost(): Call<List<Post>>
 
-    @POST ("Posts")
+    @POST ("posts")
     fun addPost(@Body post:Post):Call<Post>
 
-    @PUT("Posts/{id}")
+    @PUT("posts/{id}")
     fun updatePosts(@Path("id")id:String, @Body post: Post):Call<Post>
 
 
-    @DELETE("Posts/{id}")
+    @DELETE("posts/{id}")
     fun deletePosts(@Path("id")id:String):Call<Post>
 }
